@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700&display=swap'); //imported from google.com/fonts. 
+
+$primary-color: white;
+$submit-bt-bg-color: black;
+$submit-bt-color: white;
+$secondary-color: #E3E2DF;
+
+body, html {
+    margin: 0; // gets rid of initial margin set margin to what u want.
+}
+
+body {
+    height: 100%; // gets rid of initial margin sets margin to what u want.
+    font-family: 'Montserrat'; //sets font of the body to montserrat. has to be imported at the top.
+    //display:none;
+}
+
+header {
+    position: absolute; //position the header on top of regular layout.
+    padding: 1em; //padding so not in the top corner pushed away from the side.
+    z-index: 20; // set high needs to be on top of the stacking order.
+    display:flex; //flex layout for logo and nav.
+    justify-content: space-between; // goes with flex going to push out the logo and nav away from each other. logo left, nav right. (mobile first)
+    width:calc(100% - 2em); //width of header element. 100% will make scroll button, subtracting the 1em left and right from padding previous.
+    background: white;
+
+    a { //ref to any a link
+        text-decoration: none; //removes hyperlink color and underline
+        color:black;
+    }
+
+    a.logo { //now ref a logo specifically
+        font-weight: bold; //bold
+        text-transform: uppercase; //changes to uppercase
+    }
+
+    nav ul {
+        list-style: none; //gets rid of bullets
+        display:flex; // automatically floats them to the right
+        justify-content: space-around; //
+        width:100%;//
+        margin: 0;
+        padding: 0;
+    }
+
+    li a{ 
+        padding: 0.5em;
+        font-weight: bold;
+    }
+}
+
+.wrapper {
+    display:grid;
+    grid-template-columns: auto;
+
+    section {
+        padding: 3em;
+
+
+        h1, h2, .read-btn {
+            text-transform: uppercase;
+            margin: 0;
+
+        }
+
+        h2 {
+            font-size: 1.4rem;
+        }
+
+        .read-btn {
+            text-decoration: none;
+            color:black;
+            font-weight: bold;
+            background: url(../images/Path\ 5.svg);
+            background-size: 8px;
+            background-position: 0 1px;
+            padding-left: 1em;
+        }
+
+        .primary {
+            padding: 1.5em 1.5em 1.5em calc(3em + 15pxk);
+            background-position: 0.2em;
+            border: 1px solid black;
+            margin-top: 1em;
+            margin-left: -3em;
+            display:inline-block;
+            background-color: white;
+            width: 35%;
+        }
+
+        .clipper {
+            overflow:hidden;
+        }
+    }
+}
+
